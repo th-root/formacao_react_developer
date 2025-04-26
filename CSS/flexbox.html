@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7e9ce9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
         .flex {
             display: flex;
             width: 100%;
@@ -17,6 +25,57 @@
             align-items: center;
             justify-content: center;
         }
+        /* Pseudo-classes */
+        input:focus {
+            border-color: #f00;
+            background-color: gray;  
+            outline: 2px solid #000;
+        }
+        .item:nth-child(1) {
+            background-color: #f00;
+        }
+        .item:nth-child(2) {
+            background-color: #0f0;
+        }
+        .item:nth-child(3) {
+            background-color: #00f;
+        }
+        .item:hover {
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        .item:active {
+            background-color: #f20af6;
+            color: #000;
+        }
+        .item:focus {
+            outline: 2px solid #000;
+        }
+        .item:focus-visible {
+            outline: 2px solid #f00;
+        }
+        .item:focus-within {
+            outline: 2px solid #0f0;
+        }
+        .item:focus-within:hover {
+            background-color: #00f;
+        }
+
+        @media (max-width: 600px) {
+            .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .item {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            body {
+                background-color: #9aef8b;
+            }
+            
+        }
     </style> 
     <title>Flex Box</title>
 </head>
@@ -27,5 +86,6 @@
         <div class="item">B</div>
         <div class="item">C</div>
     </div>
+    <input type="text" placeholder="Digite algo aqui" />
 </body>
 </html>
